@@ -1,0 +1,18 @@
+// use prisma-next
+
+model Job {
+  id              String      @id @default(uuid())
+  product         String
+  media           String
+  category        String
+  status          String
+  createdAt       DateTime    @default(now())
+}
+
+model JobResult {
+  id              String      @id @default(uuid())
+  title           String
+  description     String
+  cost            String
+  jobId           String
+}
